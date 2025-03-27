@@ -5,11 +5,11 @@ const {
 
 const router = express.Router();
 
-router.post("/todos", verifyToken, createTodo);
+router.post("/todos", createTodo);
 
-router.get("/todos", verifyToken, getTodos);
+router.get("/todos", getTodos);
 
-router.put("/todos/:id", verifyToken, updateTodo);
+router.put("/todos/:id", updateTodo);
 
-router.delete("/todos/:id", verifyToken, removeTodo);
+router.delete("/todos/:id", removeTodo);
 module.exports = router;
